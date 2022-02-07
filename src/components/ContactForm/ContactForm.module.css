@@ -1,0 +1,29 @@
+.form {
+  margin: 0 auto;
+  width: 400px;
+  border: 1px solid rgb(53, 20, 20);
+  display: block;
+  padding: 40px 70px;
+  min-height: 200px;
+  border-radius: 3px;
+}
+.label {
+  display: block;
+
+  margin-top: 20px;
+}
+.span {
+  display: block;
+
+  width: 70px;
+}
+.input {
+  width: 180px;
+  height: 20px;
+  margin-top: 5px;
+  margin-right: 240px;
+}
+.form__btn {
+  margin-top: 30px;
+  padding: 5px 10px;
+}

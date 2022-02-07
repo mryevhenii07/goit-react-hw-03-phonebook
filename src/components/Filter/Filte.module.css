@@ -1,0 +1,7 @@
+.filterSubTitle {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+  font-weight: normal;
+  font-size: 17px;
+}

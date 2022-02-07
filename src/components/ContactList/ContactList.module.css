@@ -1,0 +1,9 @@
+.ContactListBtn {
+  width: 50px;
+  padding: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+  cursor: pointer;
+}
