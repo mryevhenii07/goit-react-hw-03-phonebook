@@ -39,7 +39,6 @@ class App extends React.Component {
   };
   nameId = shortid.generate();
   componentDidMount() {
-    console.log("componentDidMount");
     const contacts = localStorage.getItem("contacts"); //получили строку
     const parseContacts = JSON.parse(contacts); //получили массив
     if (parseContacts) {
@@ -48,11 +47,11 @@ class App extends React.Component {
     }
   }
   componentDidUpdate(prevProps, prevState) {
-    console.log("app componentDidUpdate");
-    console.log(prevState); //предыдущие состояние
-    console.log(this.state); //текущее состояние
+    // console.log("app componentDidUpdate");
+    // console.log(prevState); //предыдущие состояние
+    // console.log(this.state); //текущее состояние
     if (this.state.contacts !== prevState.contacts) {
-      console.log("okk");
+      // console.log("okk");
       localStorage.setItem("contacts", JSON.stringify(this.state.contacts));
     }
   }
