@@ -17,15 +17,27 @@ class App extends React.Component {
   };
   listId = nanoid();
 
-  addList = (number) => {
-    console.log(number);
-    const list = {
-      id: this.nameId,
-      number: number.number,
-      name: number.name,
+  addList = (contact) => {
+    if (
+      this.state.contacts.find((item) => {
+        if (item.name === contact.name) {
+          return true;
+        } else {
+          return false;
+        }
+      })
+    ) {
+      alert(`the ${contact.name} is already there`);
+      return;
+    }
+    const newContact = {
+      id: shortid.generate(),
+      number: contact.number,
+      name: contact.name,
     };
+
     this.setState((prevState) => ({
-      contacts: [list, ...prevState.contacts],
+      contacts: [newContact, ...prevState.contacts],
     }));
   };
   onDeleteList = (deleteId) => {
@@ -37,7 +49,7 @@ class App extends React.Component {
   changeFilter = (e) => {
     this.setState({ filter: e.currentTarget.value });
   };
-  nameId = shortid.generate();
+  // nameId = shortid.generate();
   componentDidMount() {
     const contacts = localStorage.getItem("contacts"); //получили строку
     const parseContacts = JSON.parse(contacts); //получили массив

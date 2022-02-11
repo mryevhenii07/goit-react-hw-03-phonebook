@@ -10,7 +10,7 @@ class Form extends React.Component {
   handleSubmit = (e) => {
     e.preventDefault();
     this.props.onSubmit(this.state);
-    // this.props.onSubmitAddList(this.state);
+
     this.reset();
   };
   //cleared the form
